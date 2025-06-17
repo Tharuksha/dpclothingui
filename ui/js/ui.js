@@ -48,7 +48,7 @@ $('.resetbutton').click(function (e) {
 $('.onecbutton').click(function (e) {
     var whatidid = $(this).attr('id');
     var clothingui = document.getElementById(whatidid);
-    if (clothingui.style.outline != "2px solid red") {
+    if (clothingui.style.outline != "2px solid #8B0000") {
         $.post(`https://${GetParentResourceName()}/changecloth`, JSON.stringify(whatidid));
     }
 });
@@ -95,7 +95,7 @@ updateclothing2 = function (clot) {
 
 restthis = function (clot) {
     var clothingui = document.getElementById(clot);
-    clothingui.style.outline = '2px solid red';
+    clothingui.style.outline = '2px solid #8B0000';
     $('#refreshcc > i').css('animation', 'refreshhud 1s 1 forwards');
     setTimeout(function () {
         clothingui.style.outline = '2px solid white';
